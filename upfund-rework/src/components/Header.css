@@ -1,0 +1,144 @@
+.logo{
+	max-height: 100px;
+  min-height: 100%;
+} 
+
+.container {
+	overflow: visible;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+  position: relative;
+	margin-top: 15px;
+	background: rgb(255, 255, 255);
+	padding: 5px 20px;
+	border-radius: 25px;
+  z-index: 10;
+}
+
+nav{
+  display: flex;
+	align-items: center;
+  justify-content: space-between;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+
+/* anim search button */
+
+form.form--search{
+	display: flex;
+	align-items: center;
+    position: relative;
+    transition: all 1s;
+    width: 40px;
+    height: 40px;
+    background:#ffffff;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 4px solid rgb(0, 0, 0);
+    padding: 5px;
+	margin-right: 15px;
+}
+
+input.input--search {
+	position: absolute;
+	background: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 100%;
+    outline: 0;
+    border: 0;
+    display: flex;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 5px 0 30px;
+	margin: 0px;
+  font-weight: 1000;
+}
+
+form.form--search img{
+	display: flex;
+	width: 15px;
+	fill: #000;
+	margin: 4px;
+	transition: 0.5s;
+}
+
+form.form--search:hover,
+form.form--search:valid{
+    width: 350px;
+    cursor: pointer;
+	justify-content: unset;
+}
+
+form.form--search:hover input,
+form.form--search:valid input{
+    display: flex;
+}
+
+
+form.form--search a {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center; 
+  width: 100%;
+}
+
+form.form--search a {
+  display: block;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+
+/* add and auth buttons */
+
+.header__buttons{
+	display: flex;
+}
+
+button.button--header-add{
+	margin-right: 15px;
+	font-size: 24px;
+	width: 40px;
+	background: #fff;
+	color: #10b3ff;
+	border: 4px solid;
+	font-weight: 800;
+  span{
+    color: #10b3ff;
+  }
+}
+
+button.button--header-profile{
+	width: 40px;
+	background: #ffffff;
+	border: 4px #000 solid;
+	justify-content: center;
+	align-items: center;
+	img{
+		display: flex;
+    margin-left: 3.9px;
+		max-width: 66%;
+    max-height: 100%;
+    object-fit: contain;
+	}
+}
