@@ -11,14 +11,23 @@ const Project = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`/api/projects/${_id}`);
+        const response = await fetch(`/projects/${_id}`, {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch project');
         }
         const data = await response.json();
         setProject(data);
       } catch (error) {
-        console.error('Error fetching project:', error);
+        if (error.name === 'SyntaxError') {
+          console.error('Error parsing JSON response:', error);
+        } else {
+          console.error('Error fetching project:', error);
+        }
       }
     };
     fetchProject();
